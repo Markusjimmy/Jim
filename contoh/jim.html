@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagram Aktivitas</title>
+    <style>
+      .node {
+        fill: #f4f4f9;
+        stroke: #000;
+        stroke-width: 2;
+      }
+      .action {
+        fill: #88c7f4;
+      }
+      .decision {
+        fill: #f7cc7f7;
+      }
+      .connector {
+        stroke: #000;
+        stroke-width: 2;
+      }
+      .label {
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Diagram Aktivitas Sistem Pengelolaan Data (Horizontal)</h2>
+    <svg width="1000" height="300">
+      <!-- Titik Awal -->
+      <rect x="50" y="100" width="200" height="50" class="node action" />
+      <text x="150" y="125" class="label">Buka Aplikasi Excel</text>
+
+      <!-- Panah dari Titik Awal -->
+      <line x1="250" y1="125" x2="350" y2="125" class="connector" marker-end="url(#arrow)" />
+
+      <!-- Input Data -->
+      <rect x="350" y="100" width="200" height="50" class="node action" />
+      <text x="450" y="125" class="label">Isi Formulir Data</text>
+
+      <!-- Panah dari Input Data -->
+      <line x1="550" y1="125" x2="650" y2="125" class="connector" marker-end="url(#arrow)" />
+
+      <!-- Keputusan Validasi Data -->
+      <polygon points="650,100 620,130 680,130" class="node decision" />
+      <text x="650" y="125" class="label">Apakah Data Valid?</text>
+
+      <!-- Panah dari Keputusan -->
+      <line x1="680" y1="125" x2="780" y2="125" class="connector" marker-end="url(#arrow)" />
+      <line x1="620" y1="130" x2="520" y2="130" class="connector" marker-end="url(#arrow)" />
+
+      <!-- Simpan Data ke Database -->
+      <rect x="780" y="100" width="200" height="50" class="node action" />
+      <text x="880" y="125" class="label">Simpan Data ke Database</text>
+
+      <!-- Panah ke Buat Laporan -->
+      <line x1="980" y1="125" x2="1080" y2="125" class="connector" marker-end="url(#arrow)" />
+
+      <!-- Buat Laporan -->
+      <rect x="1080" y="100" width="200" height="50" class="node action" />
+      <text x="1180" y="125" class="label">Buat Laporan</text>
+
+      <!-- Tampilkan Laporan -->
+      <rect x="1180" y="100" width="200" height="50" class="node action" />
+      <text x="1280" y="125" class="label">Tampilkan Laporan</text>
+
+      <!-- Jalur Error (Jika Data Tidak Valid) -->
+      <line x1="520" y1="130" x2="420" y2="130" class="connector" marker-end="url(#arrow)" />
+      <rect x="420" y="100" width="200" height="50" class="node action" />
+      <text x="520" y="125" class="label">Tampilkan Pesan Error</text>
+    </svg>
+
+    <!-- Marker untuk panah -->
+    <svg width="0" height="0">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+          <polygon points="0,0 10,5 0,10" fill="#000" />
+        </marker>
+      </defs>
+    </svg>
+  </body>
+</html>

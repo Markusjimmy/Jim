@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markus Jimmy</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background: linear-gradient(to right, #a0c4ff, #3a58b3); /* Gradien biru terang ke biru gelap */
+        min-height: 100vh; /* Pastikan latar belakang mencakup seluruh tinggi layar */
+        margin: 0; /* Hilangkan margin default */
+        display: flex; /* Gunakan flexbox untuk pusat konten */
+        justify-content: center; /* Pusatkan secara horizontal */
+        align-items: center; /* Pusatkan secara vertikal */
+        font-family: "Arial", sans-serif; /* Pilih font yang bersih dan modern */
+      }
+
+      .profile-container {
+        background-color: #fff; /* Latar belakang putih untuk card */
+        border-radius: 20px; /* Sudut melengkung lebih besar */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih tajam untuk memberi kesan depth */
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+        max-width: 380px; /* Maksimal lebar card */
+      }
+
+      .profile-image {
+        width: 150px; /* Ukuran gambar profil lebih besar untuk menampilkan lebih banyak wajah */
+        height: 150px; /* Ukuran gambar profil lebih besar */
+        border-radius: 50%; /* Membuat gambar menjadi bulat */
+        object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+        object-position: top; /* Mengatur posisi gambar agar wajah lebih terlihat */
+        margin-bottom: 20px; /* Jarak antara gambar dan nama */
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.6); /* Efek cahaya biru yang terang di sekitar foto */
+        transition: box-shadow 0.3s ease; /* Transisi yang halus untuk perubahan cahaya */
+      }
+
+      .profile-image:hover {
+        box-shadow: 0 0 40px rgba(0, 123, 255, 1); /* Cahaya menjadi lebih terang dan jelas saat hover */
+      }
+
+      .profile-name {
+        font-size: 2rem; /* Ukuran font untuk nama */
+        font-weight: 700; /* Menebalkan nama */
+        color: #333; /* Warna nama */
+        margin-bottom: 10px;
+      }
+
+      .profile-description {
+        font-size: 1.1rem; /* Ukuran font deskripsi */
+        color: #555; /* Warna deskripsi */
+        margin-bottom: 25px; /* Jarak antara deskripsi dan daftar tautan */
+      }
+
+      .link-list {
+        list-style: none; /* Hilangkan bullet points */
+        padding: 0;
+      }
+
+      .link-list li {
+        margin-bottom: 15px; /* Jarak antar tombol sosial media */
+      }
+
+      .link-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        background-color: #4e73df; /* Warna tombol */
+        color: white;
+        text-decoration: none;
+        border-radius: 8px; /* Sudut tombol melengkung */
+        font-size: 0.9rem; /* Ukuran font lebih kecil */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .link-button:hover {
+        background-color: #2e59d9; /* Efek hover pada tombol */
+        transform: scale(1.05); /* Efek sedikit membesar pada hover */
+      }
+
+      .link-button i {
+        margin-right: 10px; /* Jarak antara ikon dan teks */
+        font-size: 1.3rem; /* Ukuran ikon */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-container">
+      <img src="Img/Jim.JPG" alt="Your Profile Picture" class="profile-image" />
+      <h1 class="profile-name">Markus Jimmy</h1>
+      <p class="profile-description">Follow me on my social media accounts!</p>
+      <ul class="link-list">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61564110842732&mibextid=ZbWKwL" class="link-button" target="_blank"> <i data-feather="facebook"></i> Follow me on Facebook </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/jimbeliyau/profilecard/?igsh=NTRpbnN3cGJucWhh" class="link-button" target="_blank"> <i data-feather="instagram"></i> Follow me on Instagram </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/markus-jimmy-109907297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="link-button" target="_blank">
+            <i data-feather="linkedin"></i> Follow me on LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/sessions/verified-device" class="link-button" target="_blank"> <i data-feather="github"></i> Follow me on GitHub </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@beeliyau?_t=8rUOTaadRea&_r=1" class="link-button" target="_blank"> <i data-feather="music"></i> Follow me on Tik-Tok </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      feather.replace(); // Initialize Feather Icons
+    </script>
+  </body>
+</html>
